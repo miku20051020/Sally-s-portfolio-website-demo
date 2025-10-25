@@ -1,194 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sally's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Sally's Portfolio</h1>
-            <div class="contact-info">
-                <span class="contact-item">Tel: +852 5613 2796</span>
-                <span class="contact-item">Email: morandmor@163.com</span>
-            </div>
-        </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container narrow">
+        <a class="site-brand" href="#profile">Sally</a>
+        <nav class="site-nav">
+          <a href="#profile">Profile</a>
+          <a href="#works">Works</a>
+          <a href="#skills">Notes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero Section (Cover Page) -->
-    <section class="hero">
-        <div class="hero-pattern"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h2 class="hero-title">Hi! I'm Sally</h2>
-                <p class="hero-subtitle">Product Designer | Undergrads from PolyU</p>
-                <div class="hero-scroll-indicator">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+      <section class="cover" id="profile">
+        <div class="container narrow">
+          <p class="intro-label">Product Designer &middot; PolyU Undergrad</p>
+          <h1 class="intro-title">Hi, I'm Sally.</h1>
+          <p class="intro-text">
+            I observe quiet, everyday rituals and translate them into gentle
+            products and services. My work blends industrial design tactility
+            with narrative-driven UX storytelling.
+          </p>
 
-    <!-- Skills Bar Section -->
-    <section class="skills-bar">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-tree">
-                <div class="skill-root">
-                    <span class="skill-keyword">
-                        <i class="fas fa-language"></i>
-                        Languages
-                    </span>
-                    <div class="skill-content">
-                        <ul class="skill-list">
-                            <li><i class="fas fa-circle"></i> Native Mandarin</li>
-                            <li><i class="fas fa-circle"></i> Advanced English (IELTS 7)</li>
-                            <li><i class="fas fa-circle"></i> Good Cantonese</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="skill-root">
-                    <span class="skill-keyword">
-                        <i class="fas fa-cogs"></i>
-                        Technical Skills
-                    </span>
-                    <div class="skill-content">
-                        <ul class="skill-list">
-                            <li><i class="fas fa-cube"></i> 3D Design & CAD: Rhino, SolidWorks, Fusion, Tinkercad, Shapr3D</li>
-                            <li><i class="fas fa-paint-brush"></i> Rendering & Prototyping: KeyShot, Blender, Figma</li>
-                            <li><i class="fas fa-project-diagram"></i> Parametric Design: Grasshopper</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="skill-root">
-                    <span class="skill-keyword">
-                        <i class="fas fa-paint-brush"></i>
-                        Graphic & Visual Design
-                    </span>
-                    <div class="skill-content">
-                        <ul class="skill-list">
-                            <li><i class="fas fa-image"></i> Adobe Suite: Photoshop, Illustrator</li>
-                            <li><i class="fas fa-video"></i> Animation & Video: Frame-by-frame animation, Video editing</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="skill-root">
-                    <span class="skill-keyword">
-                        <i class="fas fa-tools"></i>
-                        Other Skills
-                    </span>
-                    <div class="skill-content">
-                        <ul class="skill-list">
-                            <li><i class="fas fa-code"></i> Programming: Python, Arduino IDE</li>
-                            <li><i class="fas fa-file-alt"></i> Productivity: Microsoft Office</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          <figure class="profile-card">
+            <div class="profile-photo" role="presentation"></div>
+            <figcaption>
+              Always studying how people move, gather, and share moments.
+            </figcaption>
+          </figure>
 
-    <!-- Working Experience Section -->
-    <section class="experience">
-        <div class="container">
-            <h2 class="section-title">Working Experience</h2>
-            
-            <!-- Experience 1 -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="company-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Lee Yuen Housewares Co. Ltd.</h3>
-                        <div class="position-info">
-                            <span class="position">
-                                <i class="fas fa-briefcase"></i>
-                                Product Design Intern (Student Intern)
-                            </span>
-                            <span class="duration">
-                                <i class="fas fa-calendar-alt"></i>
-                                July 2025 - Sep 2025 | Kowloon, Hong Kong
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-content">
-                    <ul class="responsibilities">
-                        <li><i class="fas fa-cube"></i> Designed 9 Christmas cookie cutters, melon scoop, and bread warmer pattern through ideation and 3D modeling (Rhino)</li>
-                        <li><i class="fas fa-search"></i> Researched sustainable, durable materials compatible with dishwashers/microwaves</li>
-                        <li><i class="fas fa-users"></i> Collaborated with product engineers to refine designs based on 3D-printed prototypes and team feedbacks</li>
-                        <li><i class="fas fa-paint-brush"></i> Produced KeyShot renderings and presentations to communicate concepts</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Experience 2 -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="company-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">PolyU Technology & Consultancy Co. Limited</h3>
-                        <div class="position-info">
-                            <span class="position">
-                                <i class="fas fa-briefcase"></i>
-                                Student Helper
-                            </span>
-                            <span class="duration">
-                                <i class="fas fa-calendar-alt"></i>
-                                July 2024 - Jan 2025 | Kowloon, Hong Kong
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-content">
-                    <ul class="responsibilities">
-                        <li><i class="fas fa-cube"></i> Created 3D models and applied parametric CAD for lab prototypes</li>
-                        <li><i class="fas fa-eye"></i> Visualized early-stage design components</li>
-                        <li><i class="fas fa-tasks"></i> Coordinated with lab supervisor on project planning</li>
-                    </ul>
-                </div>
-            </div>
+          <div class="margin-notes">
+            <p class="note note-left">
+              Tel: +852 5613 2796<br />Email: morandmor@163.com
+            </p>
+            <p class="note note-right">
+              Based in Hong Kong<br />Available for internships from July 2025
+            </p>
+          </div>
         </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-handshake"></i>
-                Let's Connect
-            </h2>
-            <div class="contact-content">
-                <p>Feel free to reach out if you'd like to collaborate or just say hello!</p>
-                <div class="contact-links">
-                    <a href="tel:+85256132796" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                        +852 5613 2796
-                    </a>
-                    <a href="mailto:morandmor@163.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        morandmor@163.com
-                    </a>
-                </div>
-            </div>
+        <div class="floating-icons" aria-hidden="true">
+          <span class="floating-icon floating-icon--red">✦</span>
+          <span class="floating-icon floating-icon--blue">✶</span>
+          <span class="floating-icon floating-icon--ring"></span>
         </div>
-    </section>
+      </section>
+
+      <section class="about" id="works">
+        <div class="container narrow">
+          <h2 class="section-heading">Recent Projects</h2>
+          <p class="section-subheading">
+            A few small stories about making household rituals kinder.
+          </p>
+
+          <div class="project-list">
+            <article class="project-card">
+              <h3 class="project-title">
+                Lee Yuen Housewares &mdash; Festive Kitchen Series
+              </h3>
+              <p class="project-meta">
+                Product Design Intern &middot; Jul&ndash;Sep 2025
+              </p>
+              <p class="project-body">
+                Designed playful yet durable holiday bakeware: nine cookie
+                cutters, a melon scoop, and a bread warmer pattern. Guided every
+                stage from hand sketch to Rhino modeling and production-ready
+                detailing.
+              </p>
+              <p class="project-note">
+                Collaborated closely with engineers, prototyped fast, and
+                refined forms with KeyShot renderings.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3 class="project-title">Material Research Playbook</h3>
+              <p class="project-meta">Independent Study</p>
+              <p class="project-body">
+                Investigated dishwasher-safe, microwave-friendly blends to
+                support responsible manufacturing. Compiled a tactile library
+                and life-cycle snapshots for the product team.
+              </p>
+              <p class="project-note">
+                Outcome: a concise guide for sourcing teams with quick decision
+                trees.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3 class="project-title">Storyboarding Daily Interfaces</h3>
+              <p class="project-meta">Personal Exploration</p>
+              <p class="project-body">
+                Animated frame-by-frame sequences to test how light, gesture,
+                and voice cues invite users into a product journey. Balanced
+                physical prototypes with Figma flows.
+              </p>
+              <p class="project-note">
+                An ongoing sketchbook that keeps my visual language honest and
+                warm.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="notes" id="skills">
+        <div class="container narrow">
+          <h2 class="section-heading">Studio Notes</h2>
+          <div class="notes-grid">
+            <div class="note-card">
+              <h3 class="note-title">Languages</h3>
+              <ul>
+                <li>Native Mandarin</li>
+                <li>Advanced English (IELTS 7)</li>
+                <li>Conversational Cantonese</li>
+              </ul>
+            </div>
+            <div class="note-card">
+              <h3 class="note-title">3D &amp; Parametric</h3>
+              <ul>
+                <li>Rhino, SolidWorks, Fusion, Tinkercad, Shapr3D</li>
+                <li>Grasshopper experiments for quick variations</li>
+              </ul>
+            </div>
+            <div class="note-card">
+              <h3 class="note-title">Rendering &amp; Visuals</h3>
+              <ul>
+                <li>KeyShot, Blender, Figma</li>
+                <li>Adobe Photoshop &amp; Illustrator</li>
+                <li>Frame-by-frame animation &amp; video editing</li>
+              </ul>
+            </div>
+            <div class="note-card">
+              <h3 class="note-title">Other Tools</h3>
+              <ul>
+                <li>Python, Arduino IDE</li>
+                <li>Microsoft Office for concise documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container narrow">
+          <h2 class="section-heading">Say Hello</h2>
+          <p class="contact-text">
+            I enjoy slow conversations about craft, learning, and the small
+            gestures that make a product feel alive. Write me a note and I'll
+            brew some tea.
+          </p>
+          <div class="contact-actions">
+            <a class="contact-link" href="mailto:morandmor@163.com"
+              >morandmor@163.com</a
+            >
+            <a class="contact-link" href="tel:+85256132796">+852 5613 2796</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container narrow">
+        <p>
+          &copy; <span id="year"></span> Sally. Crafted with curiosity and
+          kindness.
+        </p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
