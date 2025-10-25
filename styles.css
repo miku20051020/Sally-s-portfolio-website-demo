@@ -50,11 +50,34 @@ img {
 }
 
 .page-header {
-  background: transparent;
+  background: rgba(253, 250, 243, 0.94);
   padding: 28px 0 12px;
   position: sticky;
   top: 0;
   z-index: 5;
+  backdrop-filter: blur(12px);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 -1px 0 0 var(--line);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.page-header.is-solid {
+  background: rgba(253, 250, 243, 0.98);
+  box-shadow: 0 16px 40px rgba(47, 42, 38, 0.08);
+}
+
+.page-header.is-solid::after {
+  opacity: 0.3;
 }
 
 .site-brand {
@@ -80,7 +103,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
 }
 
@@ -90,6 +112,8 @@ main {
 
 .cover {
   padding: 64px 0 96px;
+  position: relative;
+  overflow: hidden;
 }
 
 .intro-label {
@@ -160,6 +184,71 @@ main {
 .profile-card figcaption {
   font-style: italic;
   color: var(--muted);
+}
+
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-icon {
+  position: absolute;
+  display: inline-block;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  opacity: 0.5;
+  animation: float 12s ease-in-out infinite;
+}
+
+.floating-icon--red {
+  color: rgba(198, 75, 71, 0.5);
+  top: 12%;
+  left: 4%;
+  animation-duration: 14s;
+}
+
+.floating-icon--blue {
+  color: rgba(68, 98, 168, 0.45);
+  top: 68%;
+  right: 8%;
+  animation-duration: 16s;
+  animation-delay: 2s;
+}
+
+.floating-icon--ring {
+  font-size: 0;
+  width: 72px;
+  height: 72px;
+  border: 2px solid rgba(68, 98, 168, 0.2);
+  border-radius: 50%;
+  top: 32%;
+  right: 18%;
+  animation-duration: 20s;
+  animation-delay: 1s;
+}
+
+.floating-icon--ring::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(198, 75, 71, 0.18);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-6px, -16px, 0) rotate(4deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
 }
 
 .margin-notes {
@@ -351,6 +440,10 @@ main {
 }
 
 @media (max-width: 720px) {
+  .floating-icons {
+    display: none;
+  }
+
   .page-header .container {
     flex-direction: column;
     align-items: flex-start;

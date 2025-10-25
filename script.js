@@ -1,3 +1,4 @@
+// Handles smooth in-page navigation, header state transitions, and footer metadata.
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll('a[href^="#"]');
 
@@ -13,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+
+  const header = document.querySelector(".page-header");
+  const toggleHeaderState = () => {
+    if (!header) return;
+    const isSolid = window.scrollY > 12;
+    header.classList.toggle("is-solid", isSolid);
+  };
+
+  toggleHeaderState();
+  window.addEventListener("scroll", toggleHeaderState, { passive: true });
 
   const year = document.getElementById("year");
   if (year) {
