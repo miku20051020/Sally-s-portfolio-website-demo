@@ -1,3 +1,4 @@
+// Handles smooth in-page navigation, header state transitions, and footer metadata.
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll('a[href^="#"]');
 
